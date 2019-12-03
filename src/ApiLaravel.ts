@@ -12,35 +12,35 @@ export interface ApiConfig extends AxiosRequestConfig {
 @Service()
 export class ApiLaravel {
   @Inject('http')
-  api: AxiosInstance
+  http!: AxiosInstance
 
   constructor (axios: AxiosInstance) {
-    this.api = axios
+    this.http = axios
   }
 
   get (url: string, data: DTO = {}, config: ApiConfig = {}) {
-    return this.handleExceptions(() => this.api.get(url, {
+    return this.handleExceptions(() => this.http.get(url, {
       ...config,
       params: data
     }), config.noWrapper)
   }
 
   put (url: string, data: DTO = {}, config: ApiConfig = {}) {
-    return this.handleExceptions(() => this.api.put(url, data, config), config.noWrapper)
+    return this.handleExceptions(() => this.http.put(url, data, config), config.noWrapper)
   }
 
   post (url: string, data: DTO = {}, config: ApiConfig = {}) {
-    return this.handleExceptions(() => this.api.post(url, data, config), config.noWrapper)
+    return this.handleExceptions(() => this.http.post(url, data, config), config.noWrapper)
   }
 
   delete (url: string, data: DTO = {}, config: ApiConfig = {}) {
-    return this.handleExceptions(() => this.api.delete(url, data), config.noWrapper)
+    return this.handleExceptions(() => this.http.delete(url, data), config.noWrapper)
   }
 
   setToken (token: string) {
     // NOTE: api is the singleton so we are using it like storage.
     // This is the hack, but we have no idea how to make other way. We don`t want to send token manually each time.
-    this.api.defaults.headers.common['Authorization'] = `Bearer ${token}`
+    this.http.defaults.headers.common['Authorization'] = `Bearer ${token}`
   }
 
   isNetworkErrorException (error: AxiosError) {

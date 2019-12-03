@@ -6,22 +6,22 @@ type DTO = { [key: string]: any }
 
 @Service()
 export class ApiLaravelTransformable {
-  @Inject()
-  http!: ApiLaravel
+  @Inject('api')
+  api!: ApiLaravel
 
   get (url: string, data: DTO = {}, config: ApiConfig = {}) {
-    return this.http.get(url, classToPlain(data), config)
+    return this.api.get(url, classToPlain(data), config)
   }
 
   put (url: string, data: DTO = {}, config: ApiConfig = {}) {
-    return this.http.put(url, classToPlain(data), config)
+    return this.api.put(url, classToPlain(data), config)
   }
 
   post (url: string, data: DTO = {}, config: ApiConfig = {}) {
-    return this.http.post(url, classToPlain(data), config)
+    return this.api.post(url, classToPlain(data), config)
   }
 
   delete (url: string, data: DTO = {}, config: ApiConfig = {}) {
-    return this.http.delete(url, classToPlain(data), config)
+    return this.api.delete(url, classToPlain(data), config)
   }
 }

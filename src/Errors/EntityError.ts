@@ -1,4 +1,4 @@
-import ValidationErrorCollection from './ValidationErrorCollection'
+import {ValidationErrorCollection} from './ValidationErrorCollection'
 import { AppError } from '@aeq/http-errors'
 
 export class EntityError extends AppError {

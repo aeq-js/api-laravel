@@ -1,7 +1,9 @@
 import axios from 'axios'
 import Qs from 'qs'
-import { Container } from 'typedi'
+import { Container, Service } from 'typedi'
+import {ApiLaravel} from './ApiLaravel'
 
+@Service()
 export class ApiLaravelServiceProvider {
   boot ({ store, config }: { store: any, config: { url: string } }) {
     const axiosInstance = axios.create({
@@ -15,5 +17,7 @@ export class ApiLaravelServiceProvider {
     })
 
     Container.set('http', axiosInstance)
+    Container.set('api', ApiLaravel)
+    Container.set(ApiLaravel, ApiLaravel)
   }
 }
