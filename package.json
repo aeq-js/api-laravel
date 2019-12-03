@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/aeq-js/api-laravel/issues"
   },
-  "homepage": "https://github.com/aeq-js/api-laravel#readme"
+  "homepage": "https://github.com/aeq-js/api-laravel#readme",
+  "dependencies": {
+    "@aeq/http-errors": "^0.0.2",
+    "axios": "^0.19.0",
+    "typedi": "^0.8.0"
+  }
 }
