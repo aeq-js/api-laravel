@@ -6,7 +6,7 @@ type DTO = { [key: string]: any }
 
 @Service()
 export class ApiLaravelTransformable {
-  @Inject('api')
+  @Inject()
   api!: ApiLaravel
 
   get (url: string, data: DTO = {}, config: ApiConfig = {}) {
