@@ -1,10 +1,9 @@
 const fs = require('fs')
-const stringify = require('stringify-object')
-const config = require('./config')
+const config = require('../src/config')
 
 
 async function main () {
-  const configDir = '../../config'
+  const configDir = './src/config'
   if (!fs.existsSync(configDir)){
     fs.mkdirSync(configDir)
   }
