@@ -1,7 +1,6 @@
 import axios from 'axios'
 import Qs from 'qs'
 import { Container, Service } from 'typedi'
-import {ApiLaravel} from './ApiLaravel'
 
 @Service()
 export class ApiLaravelServiceProvider {
@@ -17,7 +16,5 @@ export class ApiLaravelServiceProvider {
     })
 
     Container.set('http', axiosInstance)
-    Container.set('api', ApiLaravel)
-    Container.set(ApiLaravel, ApiLaravel)
   }
 }
