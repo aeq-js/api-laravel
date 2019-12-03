@@ -1,6 +1,4 @@
 const fs = require('fs')
-const config = require('../src/config')
-
 
 async function main () {
   const configDir = './src/config'
@@ -9,7 +7,6 @@ async function main () {
   }
 
   const file = process.env.CONFIG || `${configDir}/ApiLaravelConfig.ts`
-  const initConfig = config
   await fs.promises.writeFile(file,
     `import { Service } from 'typedi'
 
