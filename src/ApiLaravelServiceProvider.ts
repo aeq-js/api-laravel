@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { stringify } from '../../utilities/Helper/StringHelpers'
+import Qs from 'qs'
 import { Container } from 'typedi'
 
 export class ApiLaravelServiceProvider {
@@ -10,7 +10,7 @@ export class ApiLaravelServiceProvider {
         'Content-Type': 'application/json'
       },
       paramsSerializer: (params) => {
-        return stringify(params)
+        return Qs.stringify(params, { encodeValuesOnly: true })
       }
     })
 
