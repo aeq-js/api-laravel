@@ -1,0 +1,19 @@
+{
+  "name": "@aeq/api-laravel",
+  "version": "0.0.1",
+  "description": "api-laravel",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aeq-js/api-laravel.git"
+  },
+  "author": "D3-FC <d3-fc@mail.ru>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aeq-js/api-laravel/issues"
+  },
+  "homepage": "https://github.com/aeq-js/api-laravel#readme"
+}
