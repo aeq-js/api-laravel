@@ -1,7 +1,7 @@
 import { EntityError } from './Errors/EntityError'
 import { NotFoundError, ApiError, NetworkError, UnauthorizedError } from '@aeq/http-errors'
 import { AxiosError, AxiosInstance, AxiosRequestConfig } from 'axios'
-import { Inject, Service } from 'typedi'
+import { Inject, Service, Token } from 'typedi'
 
 type DTO = { [key: string]: any }
 
@@ -9,9 +9,11 @@ export interface ApiConfig extends AxiosRequestConfig {
   noWrapper?: boolean
 }
 
+export const HttpService = new Token<AxiosInstance>()
+
 @Service()
 export class ApiLaravel {
-  @Inject('http')
+  @Inject(HttpService)
   http!: AxiosInstance
 
   constructor (axios: AxiosInstance) {
