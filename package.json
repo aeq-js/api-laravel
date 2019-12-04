@@ -1,6 +1,6 @@
 {
   "name": "@aeq/api-laravel",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "api-laravel",
   "main": "index.ts",
   "scripts": {
