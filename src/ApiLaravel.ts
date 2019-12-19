@@ -16,10 +16,6 @@ export class ApiLaravel {
   @Inject(HttpService)
   http!: AxiosInstance
 
-  constructor (axios: AxiosInstance) {
-    this.http = axios
-  }
-
   get (url: string, data: DTO = {}, config: ApiConfig = {}) {
     return this.handleExceptions(() => this.http.get(url, {
       ...config,
