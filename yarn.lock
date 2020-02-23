@@ -7,10 +7,10 @@
   resolved "https://registry.yarnpkg.com/@aeq/http-errors/-/http-errors-0.0.2.tgz#05ede128c608916a726c1f319890605ae27a189e"
   integrity sha512-tzx/5x7caROLPjWLmt3qW8HN71LYO+WOHS7LIv52EbPS+Q5WhPm4/cWZhsKb/0sodUeK5r/Sezji9BVI6nupjg==
 
-"@types/qs@^6.9.0":
-  version "6.9.0"
-  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.0.tgz#2a5fa918786d07d3725726f7f650527e1cfeaffd"
-  integrity sha512-c4zji5CjWv1tJxIZkz1oUtGcdOlsH3aza28Nqmm+uNDWBRHoMsjooBEN4czZp1V3iXPihE/VRUOBqg+4Xq0W4g==
+"@types/qs@^6.9.1":
+  version "6.9.1"
+  resolved "https://registry.yarnpkg.com/@types/qs/-/qs-6.9.1.tgz#937fab3194766256ee09fcd40b781740758617e7"
+  integrity sha512-lhbQXx9HKZAPgBkISrBcmAcMpZsmpe/Cd/hY7LGZS5OfkySUBItnPZHgQPssWYUET8elF+yCFBbP1Q0RZPTdaw==
 
 axios@^0.19.0:
   version "0.19.0"
