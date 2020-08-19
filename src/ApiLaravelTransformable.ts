@@ -10,19 +10,19 @@ export class ApiLaravelTransformable {
   @Inject()
   api!: ApiLaravel
 
-  get (url: string, data: DTO = {}, config: ApiConfig = {}) {
+  get<T> (url: string, data: (T | DTO) = {}, config: ApiConfig = {}): Promise<T> {
     return this.api.get(url, classToPlain(data), config)
   }
 
-  put (url: string, data: DTO = {}, config: ApiConfig = {}) {
+  put<T> (url: string, data: (T | DTO) = {}, config: ApiConfig = {}): Promise<T> {
     return this.api.put(url, classToPlain(data), config)
   }
 
-  post (url: string, data: DTO = {}, config: ApiConfig = {}) {
+  post<T> (url: string, data: (T | DTO) = {}, config: ApiConfig = {}): Promise<T> {
     return this.api.post(url, classToPlain(data), config)
   }
 
-  delete (url: string, data: DTO = {}, config: ApiConfig = {}) {
+  delete<T> (url: string, data: (T | DTO) = {}, config: ApiConfig = {}): Promise<T> {
     return this.api.delete(url, classToPlain(data), config)
   }
 }
