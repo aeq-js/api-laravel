@@ -53,7 +53,7 @@ export class ApiLaravel {
     let response = null
     try {
       response = await cb()
-    } catch (exception) {
+    } catch (exception: any) {
       const exceptionResponse = exception && exception.response
       const data = exceptionResponse && exceptionResponse.data
       const status = exceptionResponse && exceptionResponse.status
